@@ -8,11 +8,11 @@ btnSubmit.addEventListener("click", function () {
 
     for (i = 0; i < storedEmails.length; i++) {
       if (storedEmails[i] == userEmail) {
-        console.log("Accesso effettuato")
+        console.log("Accesso effettuato");
         // oppure con i = storedEmails.length - 1;
         return
       } else {
-        console.log("Accesso negato")
+        console.log("Accesso negato");
         //oppure con i = storedEmails.length - 1;
         return
       }
