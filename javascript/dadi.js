@@ -42,7 +42,7 @@ btnSubmit.addEventListener("click", function() {
         tableRow = document.createElement("tr");
         tableCellLeft = document.createElement("td");
         tableCellRight = document.createElement("td");
-
+        
         tableCellLeft.innerHTML = userNumbers[i];
         tableCellRight.innerHTML = botNumbers[i];
 

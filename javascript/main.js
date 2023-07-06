@@ -1,5 +1,6 @@
 const storedEmails = ["mariorossi@gmail.com", "lucabianchi@gmail.com", "giuseppeverdi@tiscali.it"];
 const btnSubmit = document.querySelector(".btn-submit");
+const emailCheck = document.querySelector(".email-check");
 let userInputEmail = document.getElementById("userEmail");
 
 
@@ -8,13 +9,11 @@ btnSubmit.addEventListener("click", function () {
 
     for (i = 0; i < storedEmails.length; i++) {
       if (storedEmails[i] == userEmail) {
-        console.log("Accesso effettuato");
-        // oppure con i = storedEmails.length - 1;
-        return
+        emailCheck.innerHTML = "Accesso effettuato"
+        i = storedEmails.length - 1;
       } else {
-        console.log("Accesso negato");
-        //oppure con i = storedEmails.length - 1;
-        return
+        emailCheck.innerHTML = "Accesso negato"
+        i = storedEmails.length - 1;
       }
     }
   }
