@@ -8,21 +8,19 @@ let userSum = 0;
 let botSum = 0;
 
 btnSubmit.addEventListener("click", function() {
-    let botNumber = Math.floor((Math.random() * 6) + 1);
+    const botNumber = Math.floor((Math.random() * 6) + 1);
 
     //check della lunghezza dell'array dei numeri dell'utente
     if (userNumbers.length < 3) {
       number = inputNumber.value; 
       if (number > 6 || number < 1) {//controlla che l'input sia valido
-        let error = document.createElement("h2");
+        const error = document.createElement("h2");
 
         error.classList.add("text-danger");
         error.innerHTML = "Hai inserito un numero non valido! Ricarica la pagina per riprovare";
 
         gameContainer.append(error);
       } else {
-
-
         userNumbers.push(number); //carica il number inserito da utente nell'array
 
         userSum += parseInt(number); //calcola la somma dei numeri dell'utente 
@@ -41,8 +39,8 @@ btnSubmit.addEventListener("click", function() {
       for (let i = 0; i < 3; i++) {
         tableRow = document.createElement("tr");
         tableCellLeft = document.createElement("td");
-        tableCellRight = document.createElement("td");
-        
+        tableCellRight = document.createElement("td"); //per non crearli a mano puoi inserire un innerHTML con il testo da inserirgli con le variabili
+
         tableCellLeft.innerHTML = userNumbers[i];
         tableCellRight.innerHTML = botNumbers[i];
 

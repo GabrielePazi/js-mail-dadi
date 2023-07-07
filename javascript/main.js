@@ -13,7 +13,6 @@ btnSubmit.addEventListener("click", function () {
         i = storedEmails.length - 1;
       } else {
         emailCheck.innerHTML = "Accesso negato"
-        i = storedEmails.length - 1;
       }
     }
   }
